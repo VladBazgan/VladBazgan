@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Complexă</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 80px auto 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            margin-top: 60px;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 30%;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Acasă</a>
+        <a href="#despre">Despre</a>
+        <a href="#servicii">Servicii</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <div class="hero">
+        <h1>Bine ai venit pe pagina noastră!</h1>
+        <p>Descoperă servicii de top și contactează-ne pentru mai multe detalii.</p>
+    </div>
+    
+    <div class="section" id="despre">
+        <h2>Despre Noi</h2>
+        <p>Suntem o echipă de profesioniști dedicați dezvoltării web.</p>
+    </div>
+    
+    <div class="section" id="servicii">
+        <h2>Serviciile Noastre</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Design Web</h3>
+                <p>Creăm design-uri moderne și atractive.</p>
+            </div>
+            <div class="card">
+                <h3>Dezvoltare</h3>
+                <p>Dezvoltăm site-uri și aplicații web performante.</p>
+            </div>
+            <div class="card">
+                <h3>Optimizare SEO</h3>
+                <p>Îmbunătățim vizibilitatea site-ului tău pe Google.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section" id="contact">
+        <h2>Contactează-ne</h2>
+        <form class="contact-form" action="https://formspree.io/f/mgvoglaw" method="POST">
+            <input type="text" name="name" placeholder="Numele tău" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Mesajul tău" required></textarea>
+            <button type="submit">Trimite</button>
+        </form>
+    </div>
+</body>
+</html>
